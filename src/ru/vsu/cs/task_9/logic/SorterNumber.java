@@ -1,9 +1,8 @@
-package ru.vsu.cs.task_9.util;
+package ru.vsu.cs.task_9.logic;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class ListUtils {
+public class SorterNumber {
     public static List<Integer> sortTheSheet(List<Integer> list) {
         int j = -1;
         int num;
@@ -18,13 +17,5 @@ public class ListUtils {
             i++;
         }
         return list;
-    }
-
-    public static ArrayList<Integer> setArrayList(int[] arr) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        for (int j : arr) {
-            numbers.add(j);
-        }
-        return numbers;
     }
 }

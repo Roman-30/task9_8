@@ -1,6 +1,7 @@
 package ru.vsu.cs.task_9.gui.listener;
 
-import ru.vsu.cs.task_9.util.ListUtils;
+import ru.vsu.cs.task_9.logic.SorterNumber;
+import ru.vsu.cs.task_9.util.ArrayListUtils;
 import ru.vsu.cs.task_9.util.ArrayUtils;
 
 import javax.swing.*;
@@ -19,7 +20,7 @@ public class SortButtonListener implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         int[] arr = ArrayUtils.toIntArray(textField1.getText());
-        List<Integer> list = ListUtils.setArrayList(arr);
-        textField2.setText(String.valueOf(ListUtils.sortTheSheet(list)));
+        List<Integer> list = ArrayListUtils.setArrayList(arr);
+        textField2.setText(String.valueOf(SorterNumber.sortTheSheet(list)));
     }
 }
