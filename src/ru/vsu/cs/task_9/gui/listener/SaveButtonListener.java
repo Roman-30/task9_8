@@ -8,19 +8,20 @@ import java.io.IOException;
 
 public class SaveButtonListener implements ActionListener {
 
-    JTextField textField2;
+    JTextField outputData;
 
-    public SaveButtonListener(JTextField textField2) {
-        this.textField2 = textField2;
+    public SaveButtonListener(JTextField outputData) {
+        this.outputData = outputData;
     }
 
     public void actionPerformed(ActionEvent e) {
         try {
             FileWriter fileWriter = new FileWriter("answer.txt");
-            fileWriter.write(textField2.getText());
+            fileWriter.write(outputData.getText());
             fileWriter.close();
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
+
     }
 }

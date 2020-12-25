@@ -10,17 +10,17 @@ import java.awt.event.ActionListener;
 import java.util.List;
 
 public class SortButtonListener implements ActionListener {
-    JTextField textField1;
-    JTextField textField2;
+    JTextField inputData;
+    JTextField outputData;
 
-    public SortButtonListener(JTextField textField1, JTextField textField2) {
-        this.textField1 = textField1;
-        this.textField2 = textField2;
+    public SortButtonListener(JTextField inputData, JTextField outputData) {
+        this.inputData = inputData;
+        this.outputData = outputData;
     }
 
     public void actionPerformed(ActionEvent e) {
-        int[] arr = ArrayUtils.toIntArray(textField1.getText());
+        int[] arr = ArrayUtils.toIntArray(inputData.getText());
         List<Integer> list = ArrayListUtils.setArrayList(arr);
-        textField2.setText(String.valueOf(SorterNumber.sortTheSheet(list)));
+        outputData.setText(String.valueOf(SorterNumber.sortTheSheet(list)));
     }
 }
